@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/mobile_navigation"
+            app:startDestination="@+id/navigation_list">
+
+    <fragment
+            android:id="@+id/navigation_list"
+            android:name="com.example.dailylist.ui.list.ListFragment"
+            android:label="@string/title_list"
+            tools:layout="@layout/fragment_list"/>
+
+    <fragment
+            android:id="@+id/navigation_calendar"
+            android:name="com.example.dailylist.ui.calendar.CalendarFragment"
+            android:label="@string/title_calendar"
+            tools:layout="@layout/fragment_calendar">
+        <action android:id="@+id/action_navigation_calendar_to_navigation_list" app:destination="@id/navigation_list"/>
+    </fragment>
+
+    <fragment
+            android:id="@+id/navigation_quadrant"
+            android:name="com.example.dailylist.ui.quadrant.QuadrantFragment"
+            android:label="@string/title_quadrant"
+            tools:layout="@layout/fragment_quadrant">
+        <action android:id="@+id/action_navigation_quadrant_to_navigation_list" app:destination="@id/navigation_list"/>
+    </fragment>
+
+    <fragment
+            android:id="@+id/navigation_tomato_clock"
+            android:name="com.example.dailylist.ui.tomatoClock.TomatoClockFragment"
+            android:label="@string/title_tomato_clock"
+            tools:layout="@layout/fragment_tomato_clock">
+        <action android:id="@+id/action_navigation_tomato_clock_to_navigation_list2"
+                app:destination="@id/navigation_list"/>
+    </fragment>
+
+    <fragment
+            android:id="@+id/navigation_clock"
+            android:name="com.example.dailylist.ui.clock.ClockFragment"
+            android:label="@string/title_clock"
+            tools:layout="@layout/fragment_clock">
+        <action android:id="@+id/action_navigation_clock_to_navigation_list" app:destination="@id/navigation_list"/>
+    </fragment>
+</navigation>

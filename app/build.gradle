@@ -1,0 +1,74 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 32
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    defaultConfig {
+        applicationId "com.example.dailylist"
+        minSdk 26
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    def listSubFile = {
+        def resFolder = 'src/main/res/layout'
+        def files = file(resFolder).listFiles()
+        def folders = []
+        files.each {
+            item -> folders.add(item.absolutePath)
+        }
+        folders.add(file(resFolder).parentFile.absolutePath)
+        return folders
+    }
+
+    sourceSets {
+        main {
+            res.srcDirs = listSubFile()
+            /*[
+            'src/main/res/layout/item',
+            'src/main/res/layout/main',
+            'src/main/res/layout/other',
+            'src/main/res/layout',
+            'src/main/res'
+    ]*/
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    implementation 'androidx.navigation:navigation-fragment:2.5.2'
+    implementation 'androidx.navigation:navigation-ui:2.5.2'
+    implementation 'com.alibaba:fastjson:2.0.19'
+    implementation 'com.alibaba:fastjson:2.0.19.android'
+    implementation 'com.google.code.gson:gson:2.10'
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.10'
+    implementation 'com.google.android.material:material:1.4.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+}

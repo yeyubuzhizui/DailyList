@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_now">今天</string>
+    <string name="menu_collect_box">收集箱</string>
+    <string name="menu_trash_can">垃圾桶</string>
+    <string name="title_list">任务清单</string>
+    <string name="nav_header_title">用户名</string>
+</resources>

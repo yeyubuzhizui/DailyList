@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">DailyList</string>
+    <string name="title_list">清单</string>
+    <string name="title_calendar">日历</string>
+    <string name="title_quadrant">四象限</string>
+    <string name="title_tomato_clock">番茄闹钟</string>
+    <string name="title_clock">打卡</string>
+    <string name="noLoginText">登录账户，保护任务数据不怕丢，还能在10+个平台随时查看，试试吧</string>
+    <string name="loginText">登录</string>
+    <string name="menu_now">今天</string>
+    <string name="menu_collect_box">收集箱</string>
+    <string name="menu_last_week">最近7天</string>
+    <string name="menu_trash_can">垃圾桶</string>
+    <string name="nav_header_desc">头像</string>
+    <string name="nav_header_title">用户名</string>
+
+    <string name="title_quadrant1">重要且紧急</string>
+    <string name="title_quadrant2">重要不紧急</string>
+    <string name="title_quadrant3">不重要但紧急</string>
+    <string name="title_quadrant4">不重要不紧急</string>
+
+</resources>

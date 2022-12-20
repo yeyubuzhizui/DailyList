@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/navigation_list"
+            android:icon="@drawable/list"
+            android:title="@string/title_quadrant1"/>
+
+    <item
+            android:id="@+id/navigation_calendar"
+            android:icon="@drawable/calendar"
+            android:title="@string/title_quadrant2"/>
+
+    <item
+            android:id="@+id/navigation_quadrant"
+            android:icon="@drawable/quadrant"
+            android:title="@string/title_quadrant3"/>
+
+    <item
+            android:id="@+id/navigation_tomato_clock"
+            android:icon="@drawable/tomato"
+            android:title="@string/title_quadrant4"/>
+
+</menu>
